@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <form class="form" id="form-car" onsubmit="event.preventDefault(), addCars()" action="/users.php">
+                    <div class="form-group">
+                        <label for="mark">Marca</label>
+                        <input type="text" class="form-control" id="mark" placeholder="Ingresa la Marca" required>
+                    </div>
+                    <div class="form-group">
+                       <label for="model">Modelo</label>
+                        <input type="text" class="form-control" id="model" placeholder="Ingresa el Modelo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                         <input type="text" class="form-control" id="color" placeholder="Ingresa el color" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="year">Año</label>
+                         <input type="text" class="form-control" id="year" placeholder="Ingresa el año" required>
+                     </div>
+                     <div class="form-group">
+                        <label for="price">Precio</label>
+                         <input type="text" class="form-control" id="price" placeholder="Ingresa el precio" required>
+                     </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+         <table class="table">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Año</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+             <tbody id="container-cars">
+                  
+             </tbody>
+         </table>
+            </div>
+       <script src="./crud.js"></script>
+</body>
+</html>
